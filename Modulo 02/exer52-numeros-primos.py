@@ -1,7 +1,6 @@
 #Exercício Python 052: Faça um programa que leia um número inteiro e diga se ele é ou não um número primo.
 
 contador = 0
-print()
 num = int(input("Digite um numero : "))
 print()
 
