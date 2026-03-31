@@ -3,13 +3,14 @@
 numero = int(input("Digite um numero : "))
 razao = int(input("Qaul a razão : "))
 
-termo0 = 0 
-i = numero
+termo = numero
+contador = 1 
 
-while not termo0 == 11: 
+while contador <= 10 :
     
-    print(f"{i}", end="==>")
+    print(f"{termo}", end="==>")
     
-    termo0 += 1
+    termo += razao
+    contador += 1
     
 print("ACABOU")
