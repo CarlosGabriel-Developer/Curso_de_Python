@@ -15,3 +15,14 @@ mais = 10
 while mais != 0 :
     
     total = total + mais
+    
+    while contador <= total :
+        
+        print(f"{termo} ==>", end="")
+        termo += razao
+        contador += 1 
+        
+        print("PAUSA")
+        mais = int(input("Quantos termos vocẽ quer mostrar a mais ? "))
+        
+print("FIM")
