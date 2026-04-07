@@ -25,5 +25,3 @@ while respota in "Ss" :
     respota = str(input("Quer continuar ? [S/N]")).upper().strip()[0]
     
 media = soma / quatidade
-
-print()
