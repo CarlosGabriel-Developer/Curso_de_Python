@@ -1,6 +1,9 @@
-palavra = input("Digite algo :")
 
-print(type(palavra))
 numero = int(input("Digte um numero : "))
 
-print(f"O seu numero é {numero} o seu antercessor é {numero-1} e o seu sucessor vai ser o {numero+1}")
+
+az_num = (f"\033[1;34m{numero+1}\033[0m")
+
+vm_num = (f"\033[1;31m{numero-1}\033[0m")
+
+print(f"O seu numero é {numero} o seu antercessor é {vm_num} e o seu sucessor vai ser o {az_num}")
