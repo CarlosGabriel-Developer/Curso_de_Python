@@ -18,7 +18,7 @@ while True :
     
     while tipo not in "PI" :
         
-        tipo = str(input("PAR OU IMPAR [I/P] : ")).upper()[0]
+        tipo = str(input("PAR OU IMPAR [I/P] : ")).upper().strip()[0]
 
     print(f"Você jogou {user} e o computador escolheu {computador}. A soma deu {soma} o jogador escolheu {tipo} ",end="")
     print("DEU PAR" if soma % 2 == 0 else "DEU IMPAR")
