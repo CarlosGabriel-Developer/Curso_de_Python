@@ -8,7 +8,9 @@ num_18 = num_homens = num_mulhers_20 = 0
 
 
 while True : 
-        
+    
+    print("="*40)
+    
     idade = int(input("Digite a sua idade : "))
     
     sexo = " "
@@ -28,11 +30,18 @@ while True :
         
     
     resposta = " " 
-        
-    while resposta not in "SN" : 
+    
+    print("="*40)
+    
+    while resposta not in "SsNn" : 
         
         resposta = str(input("Deseja continuar [S/N] : "))
         
-    if resposta == "Nn" :
+    if resposta in "Nn" :
         
         break
+    
+    
+print(f"O numero de pessoas que são maiores de 18 anos é de {num_18}")
+print(f"O numero de homens que foram cadastrados foi de  {num_homens}")
+print(f"O numero de mulheres que são menores de 20 anos é de {num_mulhers_20}")
