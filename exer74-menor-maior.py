@@ -5,8 +5,19 @@ import random
 
 num_tupla = (random.randint(1,10),random.randint(1,10),random.randint(1,10),random.randint(1,10),random.randint(1,10))
 
+print("="*20)
+
+print("Os numeros escolhidos foram os : ")
+for i in num_tupla : 
+    print(f"{i}",end=" ")
+
+print()
+
 print(f"O menor valor : [{min(num_tupla)}]")
 
 print(f"O maior valor : [{max(num_tupla)}]")
 
+print("="*20)
+print("Numeros organizados")
 print(sorted(num_tupla))
+
