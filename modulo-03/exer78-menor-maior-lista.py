@@ -23,6 +23,7 @@ for i,v in enumerate(num) :
         if v < menor : 
             
             menor = v
+
             
             
         elif v > maior : 
@@ -31,6 +32,18 @@ for i,v in enumerate(num) :
             
        
 
-print(f"O maior numero da lista foi :{maior}") 
+print(f"O maior numero da lista foi :{maior}")
+print('Index :', end='') 
+
+for i ,v in enumerate(num) : 
+    if v == maior : 
+        print(i)
  
-print(f"O menor numero da lista foi :{menor}")      
+print('-'*20)
+
+print(f"O menor numero da lista foi :{menor}") 
+print('Index :', end='') 
+
+for i ,v in enumerate(num) : 
+    if v == menor : 
+        print(i)     
