@@ -6,22 +6,22 @@ impares = []
 
 while True : 
     
-    numero = int(input('Digite um numero : '))
-    principal.append(numero)
-    
+    principal.append(int(input('Digite um numero : ')))
     print('Numero adicionado')
-    
-    if numero % 2 == 0 : 
-        
-        pares.append(numero)
-        
-    else : 
-        
-        impares.append(numero)
     
     user = str(input('Deseja continuar '))
     if user in "Nn" : 
         break
+    
+    for i , v in enumerate(principal) : 
+        
+        if v % 2 == 0 : 
+            pares.append(v)
+            
+        elif v % 2 == 1 : 
+            impares.append(v)
+    
+    
     
 print('== LISTAS DE NUMEROS == ')
 print('Todos numeros digitados')
