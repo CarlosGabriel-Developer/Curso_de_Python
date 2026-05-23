@@ -3,21 +3,21 @@
 import random
 matriz = []
 
-user = int(input("Quantos jogos vpcê quer que eu sorteie : "))
+user = int(input("Digite o numero de jogos que deseja que sorteie : "))
 
-
-#gerador de numeros
-for i in range(user) : 
+for i in range(user):
     
     jogos = []
     
-    for i in range (0,6,1) : 
+    while len(jogos) < 6 : 
         
-        jogos.append(random.randint(1,60))
+        numero = random.randint(1,60) 
         
+        if numero not in jogos :
+            jogos.append(numero)
+            
+    jogos.sort()
     matriz.append(jogos[:])
-    jogos.clear()
-
 
 
 print("-"*3,end=" ")
