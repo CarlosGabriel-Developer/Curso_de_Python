@@ -16,6 +16,15 @@ while True :
         usuario = str(input("Deseja continuar [S/N] : "))
         
         if usuario in "Nn" :
-            break()
+            break
         
+    print("-"*40)
         
+    usuario = str(input("Deseja continuar [S/N] : "))
+        
+    if usuario in "Nn" :
+        break
+            
+    print("-"*40)
+        
+print("Ate a proxima ")
