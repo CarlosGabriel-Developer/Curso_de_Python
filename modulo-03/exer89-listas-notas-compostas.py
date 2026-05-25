@@ -36,3 +36,16 @@ for i,aluno in enumerate(matriz) :
 print("-"*40)
 
 
+while True : 
+    
+    user_pesquisa = int(input("Deseja ver as notas dos alunos [999 para sair]"))
+    
+    if user_pesquisa <= len(matriz) -1 : 
+        
+        print(f"{matriz[user_pesquisa][0]} são {matriz[user_pesquisa][1]}")
+        
+    if user_pesquisa == 999 : 
+        break
+   
+    
+print("-- FIM --")
