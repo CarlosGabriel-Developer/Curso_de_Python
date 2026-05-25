@@ -2,10 +2,6 @@
 
 
 matriz = []
-<<<<<<< HEAD
-
-
-=======
 
 while True :
 
@@ -39,4 +35,4 @@ for i,aluno in enumerate(matriz) :
 
 print("-"*40)
 
->>>>>>> refactor
+
