@@ -34,3 +34,4 @@ for i,aluno in enumerate(matriz) :
     print(f"{i:<4}{aluno[0]:<8}{aluno[2]:>12.1f}")
 
 print("-"*40)
+
