@@ -8,13 +8,13 @@ while True :
 
     nome_aluno = str(input("Digite o seu nome : ")).strip().capitalize()
     
-    not1_aluno = float(input("Digite a primeira nota : "))
+    nota1_aluno = float(input("Digite a primeira nota : "))
     
-    not2_aluno = float(input("Digite a segunda nota : "))
+    nota2_aluno = float(input("Digite a segunda nota : "))
     
-    media_aluno = not2_aluno + not1_aluno /2
+    media_aluno = nota2_aluno + nota1_aluno /2
     
-    matriz.append([nome_aluno,[not1_aluno,not2_aluno],media_aluno])
+    matriz.append([nome_aluno,[nota1_aluno,nota2_aluno],media_aluno])
     
     user_aluno = str(input("Deseja continuar [S/N] : ")).strip().upper()
     
