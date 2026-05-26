@@ -8,11 +8,31 @@ while True :
 
     nome_aluno = str(input("Digite o seu nome : ")).strip().capitalize()
     
-    nota1_aluno = float(input("Digite a primeira nota : "))
+    while True : 
+            
+        nota1_aluno = float(input("Digite a sua nota : "))
+            
+        if not 0 <= nota1_aluno <= 10 : 
+                
+            print("Valor invalidao, Tente novamente")
+            
+            continue
+            
+        nota2_aluno = float(input("Digite a sua nota : "))
+        
+        if not 0 <= nota2_aluno <= 10 : 
+            
+            print("Valor invalidao, Tente novamente")
+            
+            continue
+        
+        break
+            
+    media_aluno = (nota2_aluno + nota1_aluno) /2
     
-    nota2_aluno = float(input("Digite a segunda nota : "))
-    
-    media_aluno = nota2_aluno + nota1_aluno /2
+    if media_aluno > 10 : 
+        
+        print("Média incorreta")
     
     matriz.append([nome_aluno,[nota1_aluno,nota2_aluno],media_aluno])
     
