@@ -30,16 +30,12 @@ while True :
             
     media_aluno = (nota2_aluno + nota1_aluno) /2
     
-    if media_aluno > 10 : 
-        
-        print("Média incorreta")
-    
     matriz.append([nome_aluno,[nota1_aluno,nota2_aluno],media_aluno])
+    
     
     user_aluno = str(input("Deseja continuar [S/N] : ")).strip().upper()
     
     if user_aluno in "N" : 
-        
         break
     
 
