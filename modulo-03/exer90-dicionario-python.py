@@ -2,6 +2,10 @@
 
 dicionario = {}
 
-nome = str(input("Digite o seu nome :"))
+dicionario["Nome"] = str(input("Digite o seu nome : "))
+dicionario["Media"] = float(input("Digite a sua média : ")) 
 
-nota = float(input("Digite a sua média : "))
+for k, v in dicionario.items() : 
+    
+    print(f"{k} do aluno é {v}")
+    
