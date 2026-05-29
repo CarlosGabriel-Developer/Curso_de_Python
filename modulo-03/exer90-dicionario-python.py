@@ -3,9 +3,19 @@
 dicionario = {}
 
 dicionario["Nome"] = str(input("Digite o seu nome : "))
-dicionario["Media"] = float(input("Digite a sua média : ")) 
+dicionario["Media"] = float(input("Digite a sua média : "))
+
+if dicionario["Media"] >= 7 : 
+    dicionario["Situação"] = 'Aprovado'
+    
+elif 5 < dicionario["Media"] < 7 : 
+    dicionario["Situação"] = 'Recuperção'
+    
+else : 
+    dicionario["Situação"] = 'Recuperado'
 
 for k, v in dicionario.items() : 
     
     print(f"{k} do aluno é {v}")
+
     
