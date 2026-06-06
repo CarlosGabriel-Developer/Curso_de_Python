@@ -20,3 +20,7 @@ while True :
             
     print()
     print(f"Essa palavra tem {contador} consoantes")
+    
+    usuario = str(input("Deseja continuar [S/n] : ")).lower()
+    if usuario != 's' :
+        break
