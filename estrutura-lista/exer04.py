@@ -2,10 +2,11 @@
 
 
 vogais = ['a','e','i','o','u']
-contador = 0 
+
 
 while True : 
     
+    contador = 0 
     palavra = str(input("Digite uma palavra de até 10 caracteres : ")).lower().strip()
 
     if len(palavra) > 10 : 
