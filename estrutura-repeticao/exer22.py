@@ -3,7 +3,11 @@ soma = contador = 0
 
 while True :
     
-    idade = int(input("Digite a sua idade :[0 para sair]"))
+    idade = int(input("Digite a sua idade :[Um numero abaixo de zero para sair]"))
+    
+    if idade > 120 : 
+        print("Idade invalida, Tente novamente por favor")
+        continue
     
     if idade < 0 : 
         break
@@ -11,4 +15,16 @@ while True :
     contador += 1
     soma += idade
     
-print(f"A idade media do grupo é de {soma/contador:.2f}")
+media = soma / contador
+
+if  25 >= media >= 0 : 
+    status = "jovens"
+
+elif 59 >= media >= 26 :
+    status = "adultos"
+    
+else : 
+    status ="idosos" 
+
+print(f"A idade media do grupo é de {media:.2f}")
+print(f"È um grupo de {status}")
