@@ -1,6 +1,26 @@
-##Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
+#Faça um Programa que leia um vetor A com 10 números inteiros, calcule e mostre a soma dos quadrados dos elementos do vetor.
 
-for i in range(1,50) : 
+
+numeros = []
+soma_quadrados = 0 
+
+for i in range(10) : 
     
-    if i % 2 == 1 : 
-        print(i, end=" ")
+    while True : 
+        
+        numero = int(input(f"Digite numero {i+1}°"))
+        numeros.append(numero)
+        
+        print('Numero adicionado')
+        break
+        
+        
+for i in numeros : 
+     
+    soma_quadrados += i ** 2 
+    
+    
+print(f"A soma dos quadrados dos elementos do vetor é {soma_quadrados}")
+    
+        
+    
