@@ -12,32 +12,13 @@
 
 numeros = []
 
+
 while True : 
     
-    numero = int(input("Digite um numero [-1 para sair]"))
+    numero = int(input("Digite um numero : "))
     
-    if numero == -1 : 
-        break
-    
-    else : 
+    if numero > -1 : 
         numeros.append(numero)
-    
-
-print(f"Mostre a quantidade de valores que foram lidos {(len(numeros))}")
-
-print("Exiba todos os valores na ordem em que foram informados, um ao lado do outro")
-
-for i in numeros : 
-    print(f"{i}", end=",")
-
-print()
-
-print("\nExiba todos os valores na ordem inversa à que foram informados, um abaixo do outro\n")
-
-for i in reversed(numeros) : 
-    
-    print(f'{i}')
-
-
-
-print('=== Isso é tudo pessoal ===')
+        
+    else : 
+        break
