@@ -17,8 +17,19 @@ while True :
     
     numero = int(input("Digite um numero : "))
     
-    if numero > -1 : 
-        numeros.append(numero)
-        
-    else : 
+    if numero == -1 : 
         break
+    
+    else : 
+        numeros.append(numero)
+    
+print(f"Esse foi a quantidade de numeros lidos {(len(numeros))} :")
+
+print(f"os valores na ordem em que foram informados, um ao lado do outro")
+
+for i in numeros : 
+        
+    print(i, end=" ")
+    
+    
+print("Os valores na ordem inversa à que foram informados, um abaixo do outro")
