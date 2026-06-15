@@ -1,30 +1,31 @@
 #O Departamento Estadual de Meteorologia lhe contratou para desenvolver um programa que leia as um conjunto indeterminado de temperaturas, e informe ao final a menor e a maior temperaturas informadas, bem como a média das temperaturas.
+maior = menor = None
+soma = 0
+num_tem = 0
 
-import random
+while True:
+    temperatura = float(input("Informe a temperatura [999 para sair]: "))
 
-maior = menor = 0 
-
-while True : 
-    
-    soma = 0
-    media = 0
-    
-    for i in range(30) : 
-        
-        num=input(random.randint(10,43))
-        
-        soma += num
-        
-    media = soma/30
-        
-    
-    resposta = str(input("Deseja parar [S/n]"))
-    
-    if resposta in "Ss" : 
+    if temperatura == 999:
         break
-    
 
-print('A media')
-print(media)
-        
-        
+    soma += temperatura
+    num_tem += 1
+
+    if maior is None:
+        maior = menor = temperatura
+    else:
+        if temperatura > maior:
+            maior = temperatura
+
+        if temperatura < menor:
+            menor = temperatura
+
+if num_tem > 0:
+    media = soma / num_tem
+
+    print(f"Maior temperatura: {maior}")
+    print(f"Menor temperatura: {menor}")
+    print(f"Média das temperaturas: {media:.2f}")
+else:
+    print("Nenhuma temperatura foi informada.")
