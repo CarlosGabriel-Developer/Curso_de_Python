@@ -61,8 +61,8 @@ for pessoa in lista_todas_pessoas :
         lista_todas_mulheres.append(pessoa)
         
 print("# C) Uma lista com as mulheres")
-print(lista_todas_mulheres)
-
+for i in lista_todas_mulheres : 
+    print(i)
 
 lista_todas_pessoas_acima_media = []
 
@@ -72,4 +72,5 @@ for pessoa in lista_todas_pessoas :
         lista_todas_pessoas_acima_media.append(pessoa)
         
 print('D) Uma lista de pessoas com idade acima da média')
-print(lista_todas_pessoas_acima_media)
+for i in lista_todas_pessoas_acima_media :
+    print(i)
