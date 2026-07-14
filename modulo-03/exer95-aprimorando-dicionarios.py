@@ -1,45 +1,73 @@
 #Exercício Python 095: Aprimore o desafio 93 para que ele funcione com vários jogadores, incluindo um sistema de visualização de detalhes do aproveitamento de cada jogador.
+lista_times = []
+jogador = {}
+lista_partidas = []
 
+while True:
 
-dicionario = {}
-lista_gols = []
+    jogador.clear()
 
-lista_jogadores = {}
+    jogador["Nome"] = input("Nome: ")
 
-while True : 
-    
-    nome = str(input('Nome: ')).capitalize()
-    
-    dicionario['Nome'] = nome
-    
-    numero_partidas = int(input('Numero de partidas jogadas :'))
-    
-    dicionario['Partidas'] = numero_partidas
-        
-    for jogo in range(dicionario['Partidas']):
+    num_partidas = int(input(f'Número de partidas de {jogador["Nome"]}: '))
 
-        gol = int(input(f'Gols marcados na partida{jogo+1} :'))
-        
-        if gol >= 0 :
-            
-            lista_gols.append(gol)
-        
-        else :
-            print('Tente novamente')
-            
-    dicionario['Gols'] = lista_gols
-    
-    dicionario['Total'] = sum(lista_gols)
-        
+    lista_partidas.clear()
 
-    lista_jogadores = dicionario
-        
-    usuario = str(input('Deseja continuar [S/N] :')).upper()[0]
-    
-    if usuario in 'N' : 
+    for i in range(num_partidas):
+        lista_partidas.append(
+            int(input(f'Quantos gols na partida {i+1}: '))
+        )
+
+    jogador["Gols"] = lista_partidas[:]
+    jogador["Total"] = sum(lista_partidas)
+
+    lista_times.append(jogador.copy())
+
+    while True:
+        usuario = input("Deseja continuar [S/N]? ").upper()
+
+        if usuario in "SN":
+            break
+
+        print("Responda S ou N.")
+
+    if usuario == "N":
         break
-    
-print('=-'*40)
 
-for i in lista_jogadores :
-    print(f'{i}',end=':>20f')
+print("=-"*30)
+print(f'{"Cod":<5}', end='')
+
+for chave in jogador.keys():
+    print(f'{chave:<15}', end='')
+
+print()
+print("=-"*30)
+
+for k, v in enumerate(lista_times):
+    print(f'{k:<5}', end='')
+
+    for dado in v.values():
+        print(f'{str(dado):<15}', end='')
+
+    print()
+
+print("=-"*30)
+
+while True:
+
+    busca = int(input("Deseja ver dados de qual jogador? (999 para sair): "))
+
+    if busca == 999:
+        break
+
+    if busca >= len(lista_times):
+        print("Código inválido!")
+    else:
+        print(f"\nLevantamento do jogador {lista_times[busca]['Nome']}")
+
+        for i, g in enumerate(lista_times[busca]["Gols"]):
+            print(f"No jogo {i+1} fez {g} gols.")
+
+    print("=-"*30)
+
+print("FIM DO PROGRAMA")
