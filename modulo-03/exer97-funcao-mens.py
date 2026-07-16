@@ -6,11 +6,9 @@ def escreva(msn):
     print(msn)
     print("-" * len(msn))
 
-
+escreva("Curso em Video")
+escreva('Lunna')
 
 usuario = str(input('MSN : '))
 
 escreva(usuario)
-
-escreva("Curso em Video")
-escreva('Lunna')
