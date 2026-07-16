@@ -6,4 +6,11 @@ def escreva(msn):
     print(msn)
     print("-" * len(msn))
 
-escreva("ola mundo")
+
+
+usuario = str(input('MSN : '))
+
+escreva(usuario)
+
+escreva("Curso em Video")
+escreva('Lunna')
