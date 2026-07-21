@@ -1,4 +1,4 @@
-# aça um programa para imprimir:
+#Faça um programa para imprimir:
 
 # 1
 # 1   2
