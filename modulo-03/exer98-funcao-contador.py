@@ -4,31 +4,28 @@
 # b) de 10 até 0, de 2 em 2
 # c) uma contagem personalizada
 
-def contador (inicio,fim,passo) :
-    
-    if passo < 0 :
-        passo *= -1
-        
-    if passo == 0 :
-        passo = 1 
-        
-    print(f'Contagem de {inicio} ate {fim} de {passo} em {passo}')
-    
+def contador(inicio, fim, passo):
+
+    if passo == 0:
+        passo = 1
+
+    passo = abs(passo)
+
+    print(f'{inicio} até {fim} no passo de {passo}')
+
     contador = inicio
-    
-    if inicio < fim :
-        
-        while contador <= fim : 
-            print(f"{contador}", end='-')
-            contador += passo
-        print("FIM")
-        
-    if inicio > fim :
-        
+
+    if inicio > fim:
         while contador >= fim:
-            print(f'{contador}', end='-')
+            print(contador, end=' - ')
             contador -= passo
-        print('FIM')
+
+    else:
+        while contador <= fim:
+            print(contador, end=' - ')
+            contador += passo
+
+    print('FIM')
     
 usuario_incio = int(input('Numero inicio : '))
     
