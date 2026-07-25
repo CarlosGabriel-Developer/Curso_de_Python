@@ -1,32 +1,40 @@
 ##Exercício Python 100: Faça um programa que tenha uma lista chamada números e duas funções chamadas sorteia() e somaPar(). A primeira função vai sortear 5 números e vai colocá-los dentro da lista e a segunda função vai mostrar a soma entre todos os valores pares sorteados pela função anterior.
-from random import randint
+import random
+lista_numeros = []
 
+def sorteia() : 
+    
+    lista_numeros.clear()
+    
+    for i in range(5) : 
+        
+        lista_numeros.append(random.randint(0,100))
+    
+    print('='*30)
+    print('A lista dos numeros é de :')
+    print(lista_numeros)
+    print('='*30)
+    
+sorteia()
 
-def sorteia(lista) :
-    print('Os 5 valores sorteados foram os : ', end='')
+def somaPar() : 
     
-    for i in range(0,5) : 
-        numero = randint(1,10)
-        lista.append(numero)
-        print(f'{numero}', end=' ')
-    print('Fim')
-        
-        
-        
-def somaPar(lista) :
+    soma_numerosPares = 0
+    numeros_pares =0
     
-    soma = 0
-    
-    for i in lista : 
+    for i in lista_numeros : 
         
         if i % 2 == 0 : 
-            soma += i 
             
-    print(f'A soma dos numero par foi de {soma}')
+            numeros_pares +=1
+            soma_numerosPares += i
+            
+    print(f'Foi informado {numeros_pares} numeros pares')
+    print('='*30)
+    print(f'A soma dos numeros pares é de {soma_numerosPares}')
+    print('='*30)
+    
+sorteia()
+sorteia()
 
-
-
-numeros = []
-
-sorteia(numeros)
-somaPar(numeros)
+somaPar()
