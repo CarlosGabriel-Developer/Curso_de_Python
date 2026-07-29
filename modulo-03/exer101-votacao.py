@@ -9,14 +9,14 @@ def voto(ano_nascimento) :
     idade_atual = ano_atual- ano_nascimento
 
 
-    if 18<= idade_atual <= 64 : 
+    if 18 <= idade_atual <= 64 : 
         return f"Com {idade_atual} o voto é obrigatorio"
 
-    elif idade_atual >= 65 :
-        return f"Com {idade_atual} o voto é opcionoal"
+    elif 16 <= idade_atual < 18 or idade_atual >= 70:
+        return f"Com {idade_atual} anos, o voto"
     
-    else : 
-        return "Não está autorizado o voto"
+    else:
+        return f"Com {idade_atual} anos, você ainda não pode votar."
     
     
     
