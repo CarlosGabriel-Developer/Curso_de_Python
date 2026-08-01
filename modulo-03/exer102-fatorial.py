@@ -1,6 +1,6 @@
 
 
-def fatorial (numero=1,show=0) :
+def fatorial (numero=1,show=True) :
     
     """Fatorial(Numero, show= False)
     
@@ -14,6 +14,14 @@ def fatorial (numero=1,show=0) :
     f = 1
     
     for i in range(numero,0,-1):
+        
+        if show == True : 
+            print(i, end=' ')
+            if i > 1 : 
+                print(' X ',end=' ') 
+                
+            else : 
+                print(' = ', end=' ')
         f*= i
     
     return f
