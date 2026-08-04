@@ -5,3 +5,11 @@
     # A menor nota
     # A média da turma
     # A situação (opcional)
+
+
+def notas(*nota,sit=True) : 
+    
+    dados = {}
+    
+
+    
