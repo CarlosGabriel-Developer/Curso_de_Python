@@ -6,35 +6,33 @@
 
 def contador(inicio, fim, passo):
 
-    if passo == 0:
+    if passo < 0: 
+        passo *= -1
+        
+    if passo == 0 : 
         passo = 1
 
-    passo = abs(passo)
-
-    print(f'{inicio} até {fim} no passo de {passo}')
-
-    contador = inicio
-
-    if inicio > fim:
-        while contador >= fim:
-            print(contador, end=' - ')
-            contador -= passo
-
-    else:
-        while contador <= fim:
-            print(contador, end=' - ')
-            contador += passo
-
-    print('FIM')
+    print('='*30)
+    print(f'Contagem de {inicio} até {fim} de {passo} em {passo}')
     
-usuario_incio = int(input('Numero inicio : '))
-    
-usuario_fim = int(input('Numero final : '))
-    
-usuario_passo = int(input('Passo : '))
-            
+    if inicio < fim :
+        
+        i = inicio
+        
+        while i <= fim : 
+            print(f'{i}', end=' ')
+            i += passo    
+        print('FIM')
+        
+    else : 
+        
+        i = inicio
+        
+        while i >= fim :
+            print(f'{i}', end=' ')
+            i -= passo
+        print('FIM')
+        
+contador(10,0,1)
 contador(0,10,1)
-
-contador(10,0,2)
-
-contador(usuario_incio,usuario_fim,usuario_passo)
+contador(100,0,-2)

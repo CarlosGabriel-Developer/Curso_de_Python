@@ -33,3 +33,7 @@ else :
     show = False
 
 print(fatorial(numero))
+
+#==============================================
+
+
