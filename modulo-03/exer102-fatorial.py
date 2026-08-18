@@ -18,10 +18,10 @@ def fatorial (numero=1,show=True) :
         if show == True : 
             print(i, end=' ')
             if i > 1 : 
-                print(' X ',end=' ') 
+                print('X',end=' ') 
                 
             else : 
-                print(' = ', end=' ')
+                print('=', end=' ')
         f*= i
     
     return f
