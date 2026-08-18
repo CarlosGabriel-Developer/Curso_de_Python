@@ -5,7 +5,8 @@ def leiaInt(numero='') :
     
     ok = False
     
-    valor = 0 
+    valor = 0
+    
     while True : 
         
         num = str(input(numero))

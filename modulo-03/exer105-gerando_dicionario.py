@@ -18,7 +18,7 @@ def notas(*nota,sit=False) :
     dados['Menor'] = min(nota)
     dados['Media'] = sum(nota)/len(nota)
     
-    if sit :
+    if sit == True :
         if dados['Media'] >= 7 :
             dados['Situação'] = 'BOA'
             
